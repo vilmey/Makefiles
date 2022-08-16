@@ -28,3 +28,31 @@ The linking process is done when all the needed object files are ready.
 `gcc main.o message.o -o output`
 
 Separating the build process in this way, it is possible to track changes on each file and only perform build commands when needed, on specific files.
+
+# Some makefile wildcards
+
+A makefile is based on targets, dependencies and rules, as follows
+
+`target: dependencies
+    rules`
+
+It is important to notice that Makefiles only accept tabs, so do not use spaces on it.
+
+## $@
+ The `$@` references to the target name
+
+## $^
+ The `$^` holds the dependencies names
+
+## $(@D)
+ Whenever you need the relative path to the file you are working with, this is the wildcard you should use
+
+## Example
+ Build a file
+
+ `$(BINARY): $(OBJECTS)
+	@echo "If the directory ($(@D)) does not exists, create it"
+	@mkdir -p $(@D)
+	@echo "Make the binary target ($@) based on the dependency ($^)"
+	$(CC) -o $@ $^`
+
