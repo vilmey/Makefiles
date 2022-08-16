@@ -32,9 +32,10 @@ Separating the build process in this way, it is possible to track changes on eac
 # Some makefile wildcards
 
 A makefile is based on targets, dependencies and rules, as follows
-
-`target: dependencies
-    rules`
+```
+target: dependencies
+    rules
+```
 
 It is important to notice that Makefiles only accept tabs, so do not use spaces on it.
 
