@@ -50,3 +50,12 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#Ignore Folders
+**/Debug/
+**/HostBuild/
+**/UnitTestingTarget/
+**/.settings/
+**/.test/
+**/build_test/
+/.metadata/
