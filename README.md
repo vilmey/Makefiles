@@ -50,10 +50,10 @@ It is important to notice that Makefiles only accept tabs, so do not use spaces 
 ## Example
  Build a file
 ```
-    $(BINARY): $(OBJECTS) \
-    @echo "If the directory ($(@D)) does not exists, create it" \
-    @mkdir -p $(@D) \
-    @echo "Make the binary target ($@) based on the dependency ($^)" \
-	$(CC) -o $@ $^
+$(BINARY): $(OBJECTS)
+@echo "If the directory ($(@D)) does not exists, create it"
+@mkdir -p $(@D)
+@echo "Make the binary target ($@) based on the dependency ($^)"
+$(CC) -o $@ $^
 ```
 
