@@ -62,6 +62,8 @@ $(CC) -o $@ $^
 The project number 4 *Project_4* has an example of documentation using **Doxygen**.
 
 To generate the documentation run the command bellow from the directory `Makefiles/Project_4`:
-`doxygen Doxyfile`
+```
+doxygen Doxyfile
+```
 
 The documentation will be generated under the directory `docs/html/index.html` and `docs/latex/`
